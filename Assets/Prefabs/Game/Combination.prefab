@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5367936316875888239}
-  - component: {fileID: 4636545463020195089}
-  - component: {fileID: 4712847524142474706}
   - component: {fileID: 4772509893891757936}
+  - component: {fileID: 4955469009788494078}
+  - component: {fileID: 4712847524142474706}
+  - component: {fileID: 4636545463020195089}
   m_Layer: 0
   m_Name: Combination
   m_TagString: Untagged
@@ -27,12 +28,84 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3383887496661914864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.32, y: 0.63, z: -98.29272}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4772509893891757936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383887496661914864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9166b2fef4e4b7f49916ace41802058a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _elements: []
+  AddElementEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4955469009788494078}
+        m_TargetAssemblyTypeName: CircularMovementProvider, Assembly-CSharp
+        m_MethodName: AddObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  RemoveElementEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4955469009788494078}
+        m_TargetAssemblyTypeName: CircularMovementProvider, Assembly-CSharp
+        m_MethodName: RemoveObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4955469009788494078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383887496661914864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d22fc3221a1a64dbfc823a5553a381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects: []
+  _peroid: 4
+  _radiusX: 2
+  _radiusZ: 2
+--- !u!135 &4712847524142474706
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383887496661914864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4636545463020195089
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -49,35 +122,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &4712847524142474706
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3383887496661914864}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4772509893891757936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3383887496661914864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9166b2fef4e4b7f49916ace41802058a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addElementEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  removeElementEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _elements: []

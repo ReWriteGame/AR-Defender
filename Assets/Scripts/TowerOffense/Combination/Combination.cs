@@ -1,29 +1,27 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Object = UnityEngine.Object;
 
 public class Combination : MonoBehaviour
 {
-    public UnityEvent addElementEvent;
-    public UnityEvent removeElementEvent;
     [SerializeField] private List<GameObject> _elements = new List<GameObject>();
+    public UnityEvent<GameObject> AddElementEvent;
+    public UnityEvent<GameObject> RemoveElementEvent;
 
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<ElementA>() || other.gameObject.GetComponent<ElementB>())
+        if (other.gameObject.GetComponent<Element>())
         {
             _elements.Add(other.gameObject);
             other.transform.parent = transform;
-            addElementEvent?.Invoke();
+            AddElementEvent?.Invoke(other.gameObject);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         _elements.Remove(other.gameObject);
-        removeElementEvent?.Invoke();
+        RemoveElementEvent?.Invoke(other.gameObject);
     }
 }
