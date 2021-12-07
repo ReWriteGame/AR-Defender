@@ -14,7 +14,7 @@ public class DirectMovementProvider : MonoBehaviour
             Move();
         }
     }
-
+    
     private void Move()
     {
         var distance = (_destionation - transform.position).magnitude;
@@ -26,5 +26,15 @@ public class DirectMovementProvider : MonoBehaviour
             return;
         }
         transform.Translate(Time.deltaTime * _velocity * direction);
+    }
+
+    public void Activate()
+    {
+        _isActivated = true;
+    }
+
+    public void Deactivate()
+    {
+        _isActivated = false;
     }
 }
