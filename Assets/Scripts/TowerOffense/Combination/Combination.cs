@@ -10,6 +10,11 @@ public class Combination : MonoBehaviour
     public UnityEvent removeElementEvent;
     [SerializeField] private List<GameObject> _elements = new List<GameObject>();
 
+    public List<GameObject> Elements
+    {
+        get => _elements;
+    }
+
     
     private void OnTriggerEnter(Collider other)
     {
@@ -23,7 +28,12 @@ public class Combination : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        GameObject obj = other.gameObject;
         _elements.Remove(other.gameObject);
+        //other.transform.position = 
+        //other.transform.parent = null;
+        obj.transform.parent = null;
+        //obj.transform.position = transform.TransformPoint( Vector3.zero );;
         removeElementEvent?.Invoke();
     }
 }
