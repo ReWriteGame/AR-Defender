@@ -26,7 +26,7 @@ public class ElementsGenerator : MonoBehaviour
         for (int i = 0; i < size; i++)
         {
             var reference = elementPrefabs[Random.Range(0, elementPrefabs.Length)];
-            var newElement = Object.Instantiate(reference);
+            var newElement = Object.Instantiate(reference,transform);
             currentCombination.Add(newElement);
         }
     }
