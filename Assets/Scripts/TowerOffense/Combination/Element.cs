@@ -1,8 +1,12 @@
 using UnityEngine;
 
-public abstract class Element : MonoBehaviour
+public class Element : MonoBehaviour
 {
-    private bool _isCombinated;
+    [SerializeField] private Enumerations.Elements element;
+
+    public Enumerations.Elements TypeElement { get => element; private set => element = value;}
+
+        private bool _isCombinated;
     private int _callCount;
     
 

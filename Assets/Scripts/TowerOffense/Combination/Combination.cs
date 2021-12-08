@@ -18,7 +18,7 @@ public class Combination : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<ElementA>() || other.gameObject.GetComponent<ElementB>())
+        if (other.gameObject.GetComponent<Element>())
         {
             _elements.Add(other.gameObject);
             other.transform.parent = transform;
