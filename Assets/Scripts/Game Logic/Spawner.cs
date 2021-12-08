@@ -65,7 +65,7 @@ public class Spawner : MonoBehaviour
         Instantiate(spawnerData.Prefabs[Random.Range(0, spawnerData.Prefabs.Count)], spawnParent).transform.localPosition = spawnPosition.position;
     }
     
-    public void SpawnPrefab(GameObject prefab)
+    /*public void SpawnPrefab(GameObject prefab)
     {
         spawnPrefabEvent?.Invoke();
       
@@ -79,7 +79,7 @@ public class Spawner : MonoBehaviour
             }
         }
        
-    }
+    }*/
 
     // в рандомном радиусе 
     // рандомное кол-во за раз
