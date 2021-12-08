@@ -44,6 +44,14 @@ public class CircularMovementProvider : MonoBehaviour
         }
     }
 
+    public void AddObjects(params GameObject[] objects)
+    {
+        foreach (var item in objects)
+        {
+            AddObject(item);
+        }
+    }
+
     public void AddObject(GameObject obj)
     {
         if (!_objects.Contains(obj))
@@ -55,6 +63,11 @@ public class CircularMovementProvider : MonoBehaviour
     public void RemoveObject(GameObject obj)
     {
         _objects.Remove(obj);
+    }
+
+    public void Clear()
+    {
+        _objects.Clear();
     }
 
     public void Activate()
