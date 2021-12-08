@@ -9,7 +9,6 @@ public class CircularMovementProvider : MonoBehaviour
     [SerializeField] private float _radiusZ;
     [SerializeField] private bool _isActivated = true;
     private float _progress;
-    private float _previousProgress;
     private const float Pix2 = 6.28318f;
 
 

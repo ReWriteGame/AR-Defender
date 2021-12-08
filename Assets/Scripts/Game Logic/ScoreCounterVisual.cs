@@ -12,7 +12,6 @@ public class ScoreCounterVisual : MonoBehaviour
         updateScore();
     }
 
-
     public void updateScore()
     {
         output.text = $"{scoreCounter.Score}";
@@ -22,6 +21,7 @@ public class ScoreCounterVisual : MonoBehaviour
     {
         scoreCounter.changeScoreEvent.AddListener(updateScore);
     }
+
     private void OnDisable()
     {
         scoreCounter.changeScoreEvent.RemoveListener(updateScore);
