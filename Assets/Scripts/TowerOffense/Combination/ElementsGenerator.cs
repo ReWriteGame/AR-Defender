@@ -10,9 +10,9 @@ public class ElementsGenerator : MonoBehaviour
     public GameObject[] CurrentCombination { get => currentCombination.ToArray(); }
 
 
-    public void SetRandomElements(int newSize)
+    public void SetRandomElements(int amount)
     {
-        GenerateElements(newSize);
+        GenerateElements(amount);
     }
 
     public void SetRandomElements()
