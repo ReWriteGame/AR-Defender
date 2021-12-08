@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class DirectMovementProvider : MonoBehaviour
 {
-    [SerializeField] private Vector3 _destionation;
+    [SerializeField] private Transform _target;
     [SerializeField] private float _velocity;
     [SerializeField] private bool _isActivated;
+
+    public Transform Target { get => _target; set => _target = value; }
 
 
     private void Update()
@@ -14,15 +16,16 @@ public class DirectMovementProvider : MonoBehaviour
             Move();
         }
     }
-    
+
     private void Move()
     {
-        var distance = (_destionation - transform.position).magnitude;
-        var direction = (_destionation - transform.position).normalized;
+        var destination = _target.transform.position;
+        var distance = (destination - transform.position).magnitude;
+        var direction = (destination - transform.position).normalized;
         var delta = (Time.deltaTime * _velocity * direction).magnitude;
         if (delta >= distance)
         {
-            transform.position = _destionation;
+            transform.position = destination;
             return;
         }
         transform.Translate(Time.deltaTime * _velocity * direction);
