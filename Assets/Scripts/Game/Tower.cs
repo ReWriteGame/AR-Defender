@@ -7,7 +7,8 @@ using UnityEngine.Events;
 public class Tower : MonoBehaviour
 {
     public UnityEvent getDamageEvent;
-  
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Combination>())
