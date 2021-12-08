@@ -7,6 +7,7 @@ public class CircularMovementProvider : MonoBehaviour
     [SerializeField] private float _peroid;
     [SerializeField] private float _radiusX;
     [SerializeField] private float _radiusZ;
+    [SerializeField] private bool _isActivated = true;
     private float _progress;
     private float _previousProgress;
     private const float Pix2 = 6.28318f;
@@ -14,7 +15,10 @@ public class CircularMovementProvider : MonoBehaviour
 
     private void Update()
     {
-        MoveCirculary();
+        if (_isActivated)
+        {
+            MoveCirculary();
+        }
     }
 
     private void MoveCirculary()
@@ -52,5 +56,15 @@ public class CircularMovementProvider : MonoBehaviour
     public void RemoveObject(GameObject obj)
     {
         _objects.Remove(obj);
+    }
+
+    public void Activate()
+    {
+        _isActivated = true;
+    }
+
+    public void Deactivate()
+    {
+        _isActivated = false;
     }
 }
