@@ -6,5 +6,6 @@ public class Enumerations
         elementA,
         elementB,
         elementC,
+        elementD,
     }
 }
