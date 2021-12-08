@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Element : MonoBehaviour
+public class Element : MonoBehaviour
 {
     [SerializeField] private Enumerations.Elements typeElement;
 

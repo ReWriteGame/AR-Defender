@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4840053686994137050}
+  - component: {fileID: 8174984036447860069}
   - component: {fileID: 8970302622034680876}
   - component: {fileID: 6596169733970206200}
   - component: {fileID: 6109255902798551529}
   - component: {fileID: 6353353308566434834}
-  - component: {fileID: -7026171455393228474}
   m_Layer: 0
   m_Name: ElementB
   m_TagString: Untagged
@@ -35,6 +35,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8174984036447860069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204515137669118540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd24a4680cb6f3f43ae8a1fdf44e318b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeElement: 1
 --- !u!33 &8970302622034680876
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -109,20 +122,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-7026171455393228474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7204515137669118540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd24a4680cb6f3f43ae8a1fdf44e318b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  element: 1
