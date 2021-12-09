@@ -2366,8 +2366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2884510d28df7e49a8b034af7505ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementsGenerator: {fileID: 0}
   health: {fileID: 1936665514}
+  maxDamage: 20
   matchingElements: 
 --- !u!4 &924142056 stripped
 Transform:
@@ -3115,7 +3115,7 @@ GameObject:
   m_Layer: 0
   m_Name: Elements
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3127,7 +3127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263932592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 851316451}
@@ -3145,11 +3145,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a575c58065424e640a6c8b53f2ea4740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementPrefabs:
+  OnCombinationChange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCombinationClear:
+    m_PersistentCalls:
+      m_Calls: []
+  _elementPrefabs:
   - {fileID: 1885995452255199881, guid: 443937036a16d1a44a59d008f51e9359, type: 3}
   - {fileID: 7204515137669118540, guid: 47cd1d0dd4ed45e4689d4c7ab7d3ce05, type: 3}
-  currentCombination: []
-  range: {x: 1, y: 5}
+  _currentCombination: []
+  _range: {x: 1, y: 5}
 --- !u!1 &1286604651 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1544550496003633504, guid: ca39744636ec3db4385b8e4b468e8eb9, type: 3}

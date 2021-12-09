@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class DamageLogic : MonoBehaviour
 {
-    [SerializeField]private ElementsGenerator elementsGenerator;
     [SerializeField]private ScoreCounter health;
+    [SerializeField]private int maxDamage;
 
     [SerializeField] private bool[] matchingElements;
-   
+    
+    private ElementsGenerator elementsGenerator;
+
    
     private void Awake()
     {
@@ -40,6 +42,27 @@ public class DamageLogic : MonoBehaviour
                 }
            
             }
+
+            CheckDamaga();
         }
     }
+
+    private void CheckDamaga()
+    {
+        int sizeTrue = 0;
+        foreach (bool value in matchingElements)
+            sizeTrue += value ? 1 : 0;
+
+        if (sizeTrue >= elementsGenerator.CurrentCombination.Length)
+        {
+            health.TakeAway(maxDamage);
+            print(1);
+        }
+        else
+        {
+            health.TakeAway((int)maxDamage*(sizeTrue/elementsGenerator.CurrentCombination.Length));
+            print(2);
+        }
+    }
+
 }
