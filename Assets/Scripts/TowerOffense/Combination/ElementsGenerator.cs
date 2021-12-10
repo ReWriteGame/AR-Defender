@@ -10,7 +10,7 @@ public class ElementsGenerator : MonoBehaviour
     [SerializeField] private List<GameObject> _currentCombination;
     [SerializeField] private Vector2Int _range;
 
-    public GameObject[] CurrentCombination { get => _currentCombination.ToArray(); }
+    public GameObject[] Elements { get => _currentCombination.ToArray(); }
 
 
     public void SetRandomElements(int amount)
@@ -32,7 +32,7 @@ public class ElementsGenerator : MonoBehaviour
             var newElement = Object.Instantiate(reference,transform);
             _currentCombination.Add(newElement);
         }
-        OnCombinationChange?.Invoke(CurrentCombination);
+        OnCombinationChange?.Invoke(Elements);
     }
 
     private void ClearCombination()

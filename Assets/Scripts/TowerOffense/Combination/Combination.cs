@@ -8,7 +8,7 @@ public class Combination : MonoBehaviour
     public UnityEvent<GameObject> AddElementEvent;
     public UnityEvent<GameObject> RemoveElementEvent;
 
-    public List<GameObject> Elements { get => _elements; }
+    public GameObject[] Elements { get => _elements.ToArray(); }
     
     private void OnTriggerEnter(Collider other)
     {
