@@ -7,11 +7,11 @@ public class Card : MonoBehaviour
     [SerializeField] private Spawner spawner;
     private bool inField = false;
 
-    private void OnEnable()
-    {
-        SpawnElement();
-        SpawnField();
-    }
+    // private void OnEnable()
+    // {
+    //     SpawnElement();
+    //     SpawnField();
+    // }
 
     public void SpawnElement()
     {
