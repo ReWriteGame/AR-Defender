@@ -1,9 +1,7 @@
-
-
 public enum Elements
 {
-    elementA,
-    elementB,
-    elementC,
+    ElementA,
+    ElementB,
+    ElementC,
+    ElementD
 }
-
