@@ -1,7 +1,8 @@
-public enum Elements
+public enum ElementType
 {
     ElementA,
     ElementB,
     ElementC,
-    ElementD
+    ElementD,
+    None
 }

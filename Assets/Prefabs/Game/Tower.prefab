@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef45f7c1e8f9b02488f643b2965050fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getDamageEvent:
+  GetDamageEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4676123942814066108}
@@ -235,10 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2884510d28df7e49a8b034af7505ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  elementsGenerator: {fileID: 4676123941331910634}
-  health: {fileID: 4676123941737103602}
-  matchingElements: 
+  _damage: 10
+  _elementsGenerator: {fileID: 4676123941331910634}
+  _health: {fileID: 4676123941737103602}
 --- !u!65 &4676123942814066106
 BoxCollider:
   m_ObjectHideFlags: 0

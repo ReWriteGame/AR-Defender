@@ -9,7 +9,8 @@ public class Combination : MonoBehaviour
     public UnityEvent<GameObject> RemoveElementEvent;
 
     public GameObject[] Elements { get => _elements.ToArray(); }
-    
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Element>())
