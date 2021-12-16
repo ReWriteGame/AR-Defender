@@ -78,7 +78,6 @@ public class Spawner : MonoBehaviour
         //         break;
         //     }
         // }
-
     }
 
     // в рандомном радиусе 
