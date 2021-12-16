@@ -69,6 +69,7 @@ public class Spawner : MonoBehaviour
         spawnPrefabEvent?.Invoke();
         var obj = Object.Instantiate(prefab);
         obj.transform.position = transform.position;
+
         // foreach (GameObject obj in spawnerData.Prefabs)
         // {
         //     if (PrefabUtility.GetPrefabInstanceHandle(prefab) == obj)
