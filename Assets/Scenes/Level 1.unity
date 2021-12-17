@@ -910,6 +910,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7898d81d247794ab02d1b05de1fa65, type: 3}
+--- !u!114 &211142013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4676123942814066108, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+  m_PrefabInstance: {fileID: 4676123942587444056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2884510d28df7e49a8b034af7505ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &250100518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4721,6 +4732,34 @@ PrefabInstance:
     - target: {fileID: 4676123942814066104, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
       propertyPath: m_Name
       value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676123942814066105, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+      propertyPath: TakeDamageEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676123942814066105, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+      propertyPath: TakeDamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676123942814066105, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+      propertyPath: TakeDamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 211142013}
+    - target: {fileID: 4676123942814066105, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+      propertyPath: TakeDamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676123942814066105, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+      propertyPath: TakeDamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676123942814066105, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+      propertyPath: TakeDamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DamageLogic, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676123942814066105, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+      propertyPath: TakeDamageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4676123942814066107, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
       propertyPath: m_RootOrder
