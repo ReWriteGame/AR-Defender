@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Element : MonoBehaviour
 {
-    [SerializeField] private Elements typeElement;
+    [SerializeField] private ElementType _typeElement;
 
-    public Elements TypeElement { get => typeElement; }
+    public ElementType ElementType { get => _typeElement; }
 }

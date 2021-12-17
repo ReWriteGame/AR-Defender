@@ -10,7 +10,7 @@ public class ElementsGenerator : MonoBehaviour
     [SerializeField] private List<GameObject> _currentCombination;
     [SerializeField] private Vector2Int _range;
 
-    public GameObject[] CurrentCombination { get => _currentCombination.ToArray(); }
+    public GameObject[] Elements { get => _currentCombination.ToArray(); }
 
 
     public void SetRandomElements(int amount)
@@ -29,10 +29,15 @@ public class ElementsGenerator : MonoBehaviour
         for (int i = 0; i < size; i++)
         {
             var reference = _elementPrefabs[Random.Range(0, _elementPrefabs.Length)];
-            var newElement = Object.Instantiate(reference,transform);
+            var newElement = Object.Instantiate(reference, transform);
+            
+            // Костыли!!!
+            var collider = newElement.GetComponent<Collider>();
+            Object.Destroy(collider);
+
             _currentCombination.Add(newElement);
         }
-        OnCombinationChange?.Invoke(CurrentCombination);
+        OnCombinationChange?.Invoke(Elements);
     }
 
     private void ClearCombination()

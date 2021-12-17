@@ -94,6 +94,7 @@ MonoBehaviour:
   _peroid: 4
   _radiusX: 2
   _radiusZ: 2
+  _isActivated: 1
 --- !u!114 &1467651373479055940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a521a1eb1715a814995980f08b5354cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destionation: {x: 0, y: 0, z: 0}
-  _velocity: 0
+  _target: {fileID: 0}
+  _velocity: 5
   _isActivated: 0
 --- !u!135 &4712847524142474706
 SphereCollider:

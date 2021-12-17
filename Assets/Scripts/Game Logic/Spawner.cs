@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEditor;
 
 
 public class Spawner : MonoBehaviour
@@ -64,22 +63,22 @@ public class Spawner : MonoBehaviour
         spawnPrefabEvent?.Invoke();
         Instantiate(spawnerData.Prefabs[Random.Range(0, spawnerData.Prefabs.Count)], spawnParent).transform.localPosition = spawnPosition.position;
     }
-    
-    /*public void SpawnPrefab(GameObject prefab)
+
+    public void SpawnPrefab(GameObject prefab)
     {
         spawnPrefabEvent?.Invoke();
-      
+        var obj = Object.Instantiate(prefab);
+        obj.transform.position = transform.position;
 
-        foreach (GameObject obj in spawnerData.Prefabs)
-        {
-            if (PrefabUtility.GetPrefabInstanceHandle(prefab) == obj)
-            {
-                Instantiate(obj, spawnParent).transform.localPosition = spawnPosition.position;
-                break;
-            }
-        }
-       
-    }*/
+        // foreach (GameObject obj in spawnerData.Prefabs)
+        // {
+        //     if (PrefabUtility.GetPrefabInstanceHandle(prefab) == obj)
+        //     {
+        //         Instantiate(obj, spawnParent).transform.localPosition = spawnPosition.position;
+        //         break;
+        //     }
+        // }
+    }
 
     // в рандомном радиусе 
     // рандомное кол-во за раз

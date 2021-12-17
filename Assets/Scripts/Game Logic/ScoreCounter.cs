@@ -14,9 +14,9 @@ public class ScoreCounter : MonoBehaviour
     public UnityEvent isMinScoreEvent;
     public UnityEvent isMaxScoreEvent;
 
-    public float Score { get => score; private set => score = value; }
-    public float MaxScore { get => maxScore; private set => maxScore = value; }
-    public float MinScore { get => minScore; private set => minScore = value; }
+    public float Score { get => score; }
+    public float MaxScore { get => maxScore; }
+    public float MinScore { get => minScore; }
 
 
     public void Add(float value)
@@ -57,4 +57,4 @@ public class ScoreCounter : MonoBehaviour
     }
 }
 //todo events/var overhill overdamage
-//todo зависимость макс хп от хп при настройке
+//todo пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
