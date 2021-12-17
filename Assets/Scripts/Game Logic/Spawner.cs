@@ -19,6 +19,7 @@ public class Spawner : MonoBehaviour
 
     private Coroutine currentCoroutine;
 
+
     private void Start()
     {
         if (playOnAwake) StartSpawn();
@@ -42,14 +43,12 @@ public class Spawner : MonoBehaviour
         yield break;
     }
 
-
     public void StartSpawn()
     {
         startSpawnEvent?.Invoke();
         if (currentCoroutine == null)
             currentCoroutine = StartCoroutine(StartSpawnCor());
     }
-
 
     public void StopSpawn()
     {

@@ -50,6 +50,7 @@ public class ScoreCounter : MonoBehaviour
         if (score <= minScore) isMinScoreEvent?.Invoke();
         return score <= minScore ? true : false;
     }
+    
     public bool CheckIsMax()
     {
         if (score >= maxScore) isMaxScoreEvent?.Invoke();

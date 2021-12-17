@@ -28,7 +28,8 @@ public class ElementsGenerator : MonoBehaviour
         ClearCombination();
         for (int i = 0; i < size; i++)
         {
-            var reference = _elementPrefabs[Random.Range(0, _elementPrefabs.Length)];
+            var random = new System.Random(i);
+            var reference = _elementPrefabs[random.Next(0, _elementPrefabs.Length)];
             var newElement = Object.Instantiate(reference, transform);
             
             // Костыли!!!
