@@ -92,8 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objects: []
   _peroid: 4
-  _radiusX: 2
-  _radiusZ: 2
+  _radiusX: 0.2
+  _radiusZ: 0.2
   _isActivated: 1
 --- !u!114 &1467651373479055940
 MonoBehaviour:
