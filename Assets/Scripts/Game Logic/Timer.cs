@@ -99,6 +99,5 @@ public class Timer : MonoBehaviour
             }
             yield return null;// pause on 1 frame
         }
-        yield break;
     }
 }
