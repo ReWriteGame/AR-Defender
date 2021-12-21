@@ -7,7 +7,7 @@ public class Combination : MonoBehaviour
     [SerializeField] private List<GameObject> _elements = new List<GameObject>();
     public UnityEvent<GameObject> AddElementEvent;
     public UnityEvent<GameObject> RemoveElementEvent;
-
+    public UnityEvent ClearEvent;
 
     public GameObject[] Elements { get => _elements.ToArray(); }
 
@@ -28,5 +28,10 @@ public class Combination : MonoBehaviour
         RemoveElementEvent?.Invoke(other.gameObject);
     }
 
-    
+    public void Clear()
+    {
+        _elements.Clear();
+        ClearEvent?.Invoke();
+        transform.position = Vector3.zero;
+    }
 }
