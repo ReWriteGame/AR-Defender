@@ -8,6 +8,7 @@ public class Combination : MonoBehaviour
     public UnityEvent<GameObject> AddElementEvent;
     public UnityEvent<GameObject> RemoveElementEvent;
 
+
     public GameObject[] Elements { get => _elements.ToArray(); }
 
 
@@ -26,4 +27,6 @@ public class Combination : MonoBehaviour
         _elements.Remove(other.gameObject);
         RemoveElementEvent?.Invoke(other.gameObject);
     }
+
+    
 }

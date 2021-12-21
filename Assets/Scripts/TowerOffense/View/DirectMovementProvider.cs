@@ -11,7 +11,7 @@ public class DirectMovementProvider : MonoBehaviour
 
     private void Start()
     {
-        SetTargetInvent.Invoke(this);
+        // SetTargetInvent.Invoke(this);
     }
 
     private void Update()

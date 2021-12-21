@@ -8,7 +8,7 @@ public class Tower : MonoBehaviour
 
     private void Start()
     {
-        SetTargetInvent.AddListener(x => x.Target = transform);
+        // SetTargetInvent.AddListener(x => x.Target = transform);
     }
 
     private void OnTriggerEnter(Collider other)
