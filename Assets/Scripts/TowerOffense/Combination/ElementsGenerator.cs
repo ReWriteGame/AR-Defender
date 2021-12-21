@@ -30,7 +30,7 @@ public class ElementsGenerator : MonoBehaviour
         {
             var reference = _elementPrefabs[Random.Range(0, _elementPrefabs.Length)];
             var newElement = Object.Instantiate(reference, transform);
-            
+
             // Костыли!!!
             var collider = newElement.GetComponent<Collider>();
             Object.Destroy(collider);

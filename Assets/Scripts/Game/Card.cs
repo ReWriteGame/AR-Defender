@@ -17,7 +17,7 @@ public class Card : MonoBehaviour
     {
         spawner.SpawnPrefab(elementPrefab);
     }
-    
+
     public void SpawnField()
     {
         if (!inField) spawner.SpawnPrefab(combinationPrefab);
