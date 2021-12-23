@@ -9,8 +9,12 @@ public class Destroyable : MonoBehaviour
 
     public void Destroy(float dalay = 0)
     {
-        if (dalay < 0) return;
-        if(canDestroyable) StartCoroutine(DestroyCor(dalay));
+        // if (dalay < 0) return;
+        if (canDestroyable)
+        {
+            Object.Destroy(gameObject);
+        }
+        // StartCoroutine(DestroyCor(dalay));
     }
 
     private IEnumerator DestroyCor(float dalay = 0)

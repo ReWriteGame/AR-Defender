@@ -7,7 +7,6 @@ public class DamageLogic : MonoBehaviour
     [SerializeField] private float _damage;
     [SerializeField] private ElementsGenerator _elementsGenerator;
     [SerializeField] private ScoreCounter _health;
-    //[SerializeField] private bool[] matchingElements;
 
 
     public void TakeDamage(Combination combination)
@@ -57,38 +56,4 @@ public class DamageLogic : MonoBehaviour
         }
         return result;
     }
-
-    // private void Awake()
-    // {
-    //     elementsGenerator = GetComponentInChildren<ElementsGenerator>();
-    // }
-
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.gameObject.GetComponent<Combination>())
-    //     {
-    //         List<GameObject> list = other.gameObject.GetComponent<Combination>().Elements;
-
-    //         matchingElements = new bool[list.Count];
-    //         for (int i = 0; i < matchingElements.Length; i++)
-    //             matchingElements[i] = false;
-
-
-    //         for (int i = 0; i < elementsGenerator.CurrentCombination.Length; i++)
-    //         {
-    //             for (int ii = 0; ii < list.Count; ii++)
-    //             {
-    //                 if (!matchingElements[ii])
-    //                 {
-    //                     if (elementsGenerator.CurrentCombination[i].GetComponent<Element>().TypeElement == list[ii].GetComponent<Element>().TypeElement)
-    //                     {
-    //                         matchingElements[ii] = true;
-    //                         break;
-    //                     }
-    //                 }
-    //             }
-
-    //         }
-    //     }
-    // }
 }

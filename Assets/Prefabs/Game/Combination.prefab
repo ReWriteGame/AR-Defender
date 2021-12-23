@@ -94,6 +94,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1467651373479055940}
+        m_TargetAssemblyTypeName: DirectMovementProvider, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4955469009788494078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,9 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objects: []
-  _peroid: 4
-  _radiusX: 2
-  _radiusZ: 2
+  _peroid: 10
+  _radiusX: 0.2
+  _radiusZ: 0.2
   _isActivated: 1
 --- !u!114 &1467651373479055940
 MonoBehaviour:
@@ -137,7 +149,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4636545463020195089
 Rigidbody:

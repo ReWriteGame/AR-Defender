@@ -8,12 +8,7 @@ public class DirectMovementProvider : MonoBehaviour
 
     public Transform Target { get => _target; set => _target = value; }
 
-
-    private void Start()
-    {
-        // SetTargetInvent.Invoke(this);
-    }
-
+    
     private void Update()
     {
         if (_isActivated)
@@ -44,5 +39,11 @@ public class DirectMovementProvider : MonoBehaviour
     public void Deactivate()
     {
         _isActivated = false;
+    }
+
+    public void Reset()
+    {
+        _isActivated = false;
+        transform.localPosition = Vector3.zero;
     }
 }
