@@ -3570,6 +3570,10 @@ PrefabInstance:
       propertyPath: _range.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4676123941331910634, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
+      propertyPath: _interval
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4676123941737103602, guid: 9e35366170844dc41b1ce362c4382fb9, type: 3}
       propertyPath: isMinScoreEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1

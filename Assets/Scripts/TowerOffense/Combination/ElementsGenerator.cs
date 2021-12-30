@@ -9,9 +9,20 @@ public class ElementsGenerator : MonoBehaviour
     [SerializeField] private GameObject[] _elementPrefabs;
     [SerializeField] private List<GameObject> _currentCombination;
     [SerializeField] private Vector2Int _range;
-
+    [SerializeField] private float _interval;
+    private float _passedTime;
+    
     public GameObject[] Elements { get => _currentCombination.ToArray(); }
 
+
+    private void Update()
+    {
+        _passedTime += Time.deltaTime;
+        if (_passedTime >= _interval)
+        {
+            SetRandomElements();
+        }
+    }
 
     public void SetRandomElements(int amount)
     {
@@ -38,6 +49,8 @@ public class ElementsGenerator : MonoBehaviour
             _currentCombination.Add(newElement);
         }
         OnCombinationChange?.Invoke(Elements);
+
+        _passedTime = 0;
     }
 
     private void ClearCombination()

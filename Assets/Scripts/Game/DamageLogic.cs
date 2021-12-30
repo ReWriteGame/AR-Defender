@@ -11,10 +11,8 @@ public class DamageLogic : MonoBehaviour
 
     public void TakeDamage(Combination combination)
     {
-        var weakElements = _elementsGenerator.Elements.Select(x => x.GetComponent<Element>().ElementType)
-                                                     .OrderBy(x => x);
-        var incomingElements = combination.Elements.Select(x => x.GetComponent<Element>().ElementType)
-                                                   .OrderBy(x => x);
+        var weakElements = _elementsGenerator.Elements.Select(x => x.GetComponent<Element>().ElementType);
+        var incomingElements = combination.Elements.Select(x => x.GetComponent<Element>().ElementType);
         float damage = CompareCombinations(weakElements, incomingElements) * _damage;
         _health.TakeAway(damage);
     }
@@ -26,8 +24,8 @@ public class DamageLogic : MonoBehaviour
         var greaterCollection = comb1.Count() >= comb2.Count() ? comb1 : comb2;
         var lesserCollection = comb1.Count() < comb2.Count() ? comb1 : comb2;
         lesserCollection = CompleteCollection(lesserCollection, greaterCollection.Count(), ElementType.None);
-        var e1 = greaterCollection.GetEnumerator();
-        var e2 = lesserCollection.GetEnumerator();
+        var e1 = greaterCollection.OrderBy(x => x).GetEnumerator();
+        var e2 = lesserCollection.OrderBy(x => x).GetEnumerator();
         for (; e1.MoveNext() && e2.MoveNext();)
         {
             if (e1.Current == e2.Current)
