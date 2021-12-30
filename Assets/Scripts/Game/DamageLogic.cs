@@ -32,7 +32,7 @@ public class DamageLogic : MonoBehaviour
         {
             if (e1.Current == e2.Current)
             {
-                result += 1f / lesserCollection.Count();
+                result += 1f / greaterCollection.Count();
             }
         }
         return result;
