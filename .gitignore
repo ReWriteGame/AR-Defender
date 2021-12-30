@@ -70,4 +70,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Packages/com.ptc.vuforia.engine-10.3.2.tgz
+<<<<<<< Updated upstream
 Assets/Editor/Migration/com.ptc.vuforia.engine-10.3.2.tgz
+=======
+>>>>>>> Stashed changes
